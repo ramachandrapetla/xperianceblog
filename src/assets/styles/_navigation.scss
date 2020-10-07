@@ -1,5 +1,5 @@
 .site-navigation {
-    height : 50px;
+    height : 65px;
     width : 100%;
     background : #fff;
     display : flex;
@@ -70,8 +70,9 @@
 @media screen and(max-width : 900px) {
     .site-navigation {
         .menu-content-container {
+            display : flex;
             width : 300px;
-            height : calc(100% - 50px);
+            height : calc(100% - 65px);
             background : white;
             position : absolute;
             top : 50px;
@@ -80,6 +81,7 @@
             flex-direction : column-reverse;
             padding : 0;
             padding-left : 30px;
+            z-index : 100;
 
             a {
                 width : 100%;
@@ -95,6 +97,9 @@
                 height : 50px;
                 display : flex;
                 align-items : center;
+                .active{
+                    color: rgb(235, 19, 19);
+                }
             }
             ul,li, .menu-avatar-container {
                 width : 100%;

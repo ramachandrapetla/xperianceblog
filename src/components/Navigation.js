@@ -38,17 +38,18 @@ export default class Navigation extends Component {
             })
         )
     }
+    
 
     render() {
         return (
             <nav className="site-navigation">
                 <span className="menu-title">Xperiance Blog</span>
-                <div className={`menu-content-container ${this.state.menuActive && 'active'}`}>
+                <div className={`menu-content-container ${(this.state.menuActive)&& 'active'}`}>
                     <ul>
                         {
                             navLinks.map((link, index) => (
                             <li key={index}>
-                                <Link to={link.path}>{link.title}</Link>
+                                <Link to={link.path} >{link.title}</Link>
                             </li>
                             ))
                         }

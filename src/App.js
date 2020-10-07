@@ -15,7 +15,7 @@ function App() {
       <Switch>
         <Route path="/:page" component={PageRenderer} />
         <Route path="/" render= {() => <Redirect to="/home" />} />
-        <Route component = {() => 404} />
+        <Route component = {() => 4043} />
       </Switch>
     </Router>
 

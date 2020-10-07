@@ -1,0 +1,29 @@
+.home {
+    h1 {
+        width : 100%;
+        color : $text-color;
+    }
+
+    .featured-posts-container {
+        display : flex;
+    }
+}
+
+@media screen and (max-width : 900px ) {
+    .home {
+        .h1 {
+            margin-block-start : 1.5em;
+            margin-block-end : 1.5em;
+        }
+
+        .featured-posts-container {
+            flex-direction : column;
+        }
+
+        .featured-posts-container > .masonry-post {
+            margin : 0!important;
+            width : 100%!important;
+            height : 300px!important;
+        }
+    }
+}
