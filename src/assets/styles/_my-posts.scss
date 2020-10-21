@@ -1,0 +1,24 @@
+.create-post-btn {
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    background : white;
+    border-radius : 20px;
+    outline : none;
+    border : none;
+    padding : 10px 15px;
+    margin-left : auto;
+    box-shadow : 2px 2px 3px  $btn-background;
+    font-weight : 500;
+    font-size : 18px;
+    cursor : pointer;
+    a {
+        .fa-plus {
+            font-size : 20px;
+            @include gradient-text();
+        }
+        &:hover {
+            text-decoration : none;
+        }
+    }
+}

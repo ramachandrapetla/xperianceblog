@@ -3,3 +3,18 @@ $text-light : #999;
 $text-color : #444;
 $background : #f8f9fa;
 $border : #ccc;
+$btn-background : #102C59;
+
+@mixin gradient-text()
+{
+    background: -webkit-linear-gradient(black,$text-link);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+@mixin gradient-background()
+{
+    background-image: linear-gradient(to right bottom ,black,$text-link);
+    color : #fff;
+}

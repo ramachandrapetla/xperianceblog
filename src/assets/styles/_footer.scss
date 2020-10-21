@@ -1,0 +1,60 @@
+.site-footer {
+    min-height : 100px;
+    width : 100%;
+    padding : 30px;
+    display : flex;
+    justify-content : space-around;
+    align-items : flex-start;
+
+    .footer-item {
+        padding : 0 10px;
+    }
+    .title {
+        text-align : center;
+        width : 35%;
+        .footer-title {
+            font-size : 25px;
+            font-weight : bold;
+
+            span {
+                font-family: 'Dawning of a New Day';
+                font-size : 30px;
+                font-weight : bolder;
+            }
+        }
+        .blog-description {
+            font-weight : 400;
+        }
+    }
+
+    .links {
+        span {
+            font-size : 18px;
+        }
+        li {
+            list-style-type: none;
+            
+            a {
+                color : $text-light;
+                &:hover {
+                    color : #fff;
+                }
+            }
+        }
+    }
+    .social {
+        display : flex;
+        flex-direction : column;
+        h3 {
+            color : #fff;
+        }
+
+        a {
+            color : $text-light;
+            &:hover {
+                color : #fff;
+            }
+        }
+    }
+
+}

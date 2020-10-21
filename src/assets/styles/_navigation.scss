@@ -4,15 +4,24 @@
     background : #fff;
     display : flex;
     justify-content : space-between;
-    color : $text-link;
+    position : fixed;
+    z-index : 100;
+    top : 0;
 
     .menu-title {
-        font-size : 22px;
-        font-weight : 500;
+        font-size : 25px;
+        font-weight : bold;
         height : 100%;
         display : flex;
         align-items : center;
         margin-left : 30px;
+        cursor : pointer;
+        @include gradient-text();
+        span {
+            font-family: 'Dawning of a New Day';
+            font-size : 30px;
+            font-weight : bolder;
+        }
     }
 
     .menu-content-container{
@@ -32,6 +41,7 @@
                 font-size : 18px;
                 margin-left : 15px;
                 margin : auto 10px;
+                @include gradient-text();
             }
         }    
     }
@@ -61,7 +71,7 @@
             color : $text-color;
 
             &:hover {
-                color : $text-link;
+                @include gradient-text();
             }
         }
     }
@@ -74,7 +84,7 @@
             width : 300px;
             height : calc(100% - 65px);
             background : white;
-            position : absolute;
+            position : fixed;
             top : 50px;
             left : -300px;
             transition : 300ms ease left;

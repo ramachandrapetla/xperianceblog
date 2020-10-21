@@ -1,0 +1,167 @@
+.signup-content {
+    padding: 75px 0;
+    display : flex;
+    background : white;
+    border-radius : 50px;
+    margin : 20px 0;
+    align-items : flex-start;
+    justify-content : space-around;
+
+    .signup-form{
+        padding : 0 20px 20px 50px;
+        .form-title {
+            margin-bottom: 33px;
+            @include gradient-text();
+        }
+        form {
+            .form-group {
+                position: relative;
+                margin-bottom: 25px;
+                overflow: hidden;
+            
+                label {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform : translateY(-50%);
+                    color : #222;
+            
+                    .fa {
+                        font-size: 18px;
+                    }
+                }
+            
+                input {
+                    width: 100%;
+                    display: block;
+                    border: none;
+                    border-bottom: 1px solid #999;
+                    padding: 6px 30px;
+                    box-sizing: border-box;
+                    outline : none; 
+                    &:focus {
+                        border-bottom : 1px solid black;
+                    }
+                }
+                input:focus::-webkit-input-placeholder {
+                    opacity : 0.8;
+                }
+                input[type=checkbox]:not(old) {
+                    width: 1em;
+                    margin: 0;
+                    padding: 6px 30px;
+                    font-size: 1em;
+                }
+
+                input[type=checkbox]:not(old) + label {
+                    display: inline-block;
+                    line-height: 1.5em;
+                }
+
+                .label-agree-term {
+                    position: relative;
+                    top: 0%;
+                    transform: translateY(0);
+                    -moz-transform: translateY(0);
+                    -webkit-transform: translateY(0);
+                    margin-left : 10px;
+                }
+            
+                .form-submit {
+                    display: inline-block;
+                    background: $btn-background;
+                    color: #fff;
+                    border-bottom: none;
+                    width: auto;
+                    padding: 15px 39px;
+                    border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -o-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    margin-top: 25px;
+                    cursor: pointer;
+                }
+            
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+            .checkbox {
+                display : flex;
+                align-items : center;
+            }
+        }
+    }
+
+    .signup-image {
+        padding : 0 50px 0 20px;
+        display : flex;
+        justify-content : space-between;
+        align-items : center;
+        flex-direction : column;
+        figure {
+            margin-bottom : 50px;
+            img {
+                object-fit: cover;
+                width : 100%;
+            }
+        }
+    }
+    
+}
+
+/* Image Styles */
+.signup-form, .signup-image, .signin-form, .signin-image {
+    width: 50%;
+}
+
+
+
+/* Generic Styles*/
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $btn-background;
+    opacity : 0.5;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: $btn-background;
+    opacity : 0.5;
+}
+
+/*Styles for smaller screens*/
+@media screen and(max-width : 900px) {
+    .signup-content {
+        flex-direction : column;
+
+        .signup-form, .signin-form {
+            width : 100%;
+        }
+        .signup-image , .signin-image {
+            width : 100%;
+            figure{
+                display : none;
+            }
+            a {
+                text-align : center;
+            }
+        }
+    }
+}
+
+/*
+    ERROR/SUCCES STYLES
+*/
+.msg {
+    font-style : italic;
+    margin-top : 5px;
+    i {
+        margin-right : 5px;
+    }
+}
+.msg-error {
+    color : red;
+}
+
+.msg-success {
+    color : green;
+}

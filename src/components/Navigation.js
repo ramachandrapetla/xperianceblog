@@ -22,8 +22,8 @@ const navLinks = [
 ]
 
 export default class Navigation extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             menuActive : false
         }
@@ -43,7 +43,7 @@ export default class Navigation extends Component {
     render() {
         return (
             <nav className="site-navigation">
-                <span className="menu-title">Xperiance Blog</span>
+                <span className="menu-title">Xperiance&nbsp;<span>Blog</span></span>
                 <div className={`menu-content-container ${(this.state.menuActive)&& 'active'}`}>
                     <ul>
                         {
@@ -54,6 +54,9 @@ export default class Navigation extends Component {
                             ))
                         }
                     </ul>
+                    <div className="get-started-container">
+                        <button className="btn btn-outline">Get Started</button>
+                    </div>
                     <span className="menu-avatar-container">
                         <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
                         <span className="menu-avatar-name">{`${this.props.user.firstName} ${this.props.user.lastName}`}</span>

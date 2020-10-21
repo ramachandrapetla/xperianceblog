@@ -1,16 +1,22 @@
-.home {
+.blog {
+
     h1 {
         width : 100%;
         color : $text-color;
+        padding : 0.5em 0;
     }
 
     .featured-posts-container {
         display : flex;
     }
+
+    .bg-white {
+        background : white;
+    }
 }
 
 @media screen and (max-width : 900px ) {
-    .home {
+    .blog {
         .h1 {
             margin-block-start : 1.5em;
             margin-block-end : 1.5em;
